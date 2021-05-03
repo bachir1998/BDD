@@ -141,7 +141,7 @@ public class MainActivity extends AppCompatActivity implements FragmentPlaneteLi
 
             }
 
-    });
+    }).start();
     }
 }
 

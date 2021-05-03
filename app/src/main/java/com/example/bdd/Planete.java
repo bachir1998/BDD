@@ -27,6 +27,12 @@ public class Planete {
         this.image = image;
     }
 
+    public void  Planetes(String nom, String taille, int image) {
+        this.nom = nom;
+        this.taille = taille;
+        this.image = image;
+    }
+
     public int getImage() {
         return image;
     }
