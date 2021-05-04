@@ -6,7 +6,7 @@ import androidx.room.PrimaryKey;
 
 @Entity
 public class Planete {
-    @PrimaryKey
+  @PrimaryKey(autoGenerate = true)
     public int uid;
 
     @ColumnInfo(name = "name")
@@ -20,8 +20,7 @@ public class Planete {
 
 
 
-    public Planete(int uid, String nom, String taille, int image) {
-        this.uid = uid;
+    public Planete(String nom, String taille, int image) {
         this.nom = nom;
         this.taille = taille;
         this.image = image;

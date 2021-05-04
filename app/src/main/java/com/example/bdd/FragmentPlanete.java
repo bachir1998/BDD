@@ -60,7 +60,7 @@ public class FragmentPlanete extends DialogFragment
             @Override
             public void onClick(View view) {
 
-                Planete p = new Planete(123,nom.getText().toString(),taille.getText().toString(),R.drawable.uranus);
+                Planete p = new Planete(nom.getText().toString(),taille.getText().toString(),R.drawable.uranus);
                 activity.onInsertPlanete(p);
 
             }

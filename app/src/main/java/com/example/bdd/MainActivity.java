@@ -94,15 +94,15 @@ public class MainActivity extends AppCompatActivity implements FragmentPlaneteLi
 
 
 
-        planetes.add(new Planete(1,"Mercure","4900",R.drawable.uranus));
-        planetes.add(new Planete(2,"Venus","12000",R.drawable.uranus));
-        planetes.add(new Planete(3,"Terre","12800",R.drawable.uranus));
-        planetes.add(new Planete(4,"Mars","6800",R.drawable.uranus));
-        planetes.add(new Planete(5,"Jupiter","144000",R.drawable.uranus));
-        planetes.add(new Planete(6,"Saturne","120000",R.drawable.uranus));
-        planetes.add(new Planete(7,"Uranus","52000",R.drawable.uranus));
-        planetes.add(new Planete(8,"Neptune","50000",R.drawable.uranus));
-        planetes.add(new Planete(9,"Pluton","2300",R.drawable.uranus));
+        planetes.add(new Planete("Mercure","4900",R.drawable.uranus));
+        planetes.add(new Planete("Venus","12000",R.drawable.uranus));
+        planetes.add(new Planete("Terre","12800",R.drawable.uranus));
+        planetes.add(new Planete("Mars","6800",R.drawable.uranus));
+        planetes.add(new Planete("Jupiter","144000",R.drawable.uranus));
+        planetes.add(new Planete("Saturne","120000",R.drawable.uranus));
+        planetes.add(new Planete("Uranus","52000",R.drawable.uranus));
+        planetes.add(new Planete("Neptune","50000",R.drawable.uranus));
+        planetes.add(new Planete("Pluton","2300",R.drawable.uranus));
 
         for (int index = 0; index < planetes.size(); index++) {
             Planete planete = planetes.get(index);
