@@ -22,7 +22,7 @@ public class MainActivity extends AppCompatActivity implements FragmentPlaneteLi
 
 
     public PlaneteDao planeteDao;
-    public ArrayList<Planete> planetes = new ArrayList<>();
+    public List<Planete> planetes = new ArrayList<>();
     public RecyclerView mRecyclerView;
     private MonRecyclerViewAdapter mAdapter;
     private RecyclerView.LayoutManager mLayoutManager;
@@ -69,15 +69,17 @@ public class MainActivity extends AppCompatActivity implements FragmentPlaneteLi
 
                 if (settings.getBoolean("is_data_loaded", true)) {
                     initData(planeteDao);
+
                     settings.edit().putBoolean("is_data_loaded", false).commit();
                 }
 
-                List<Planete> planetes = planeteDao.getAll();
+                planetes = planeteDao.getAll();
 
                 mRecyclerView.post(new Runnable() {
                     @Override
                     public void run()
                     {
+
                         mAdapter = new MonRecyclerViewAdapter(planetes);
                         mRecyclerView.setAdapter(mAdapter);
 
@@ -133,6 +135,7 @@ public class MainActivity extends AppCompatActivity implements FragmentPlaneteLi
 
                        //mAdapter = new MonRecyclerViewAdapter(planetes);
                         //mRecyclerView.setAdapter(mAdapter);
+
                         mAdapter.notifyDataSetChanged();
 
                     }

@@ -62,6 +62,7 @@ public class FragmentPlanete extends DialogFragment
 
                 Planete p = new Planete(nom.getText().toString(),taille.getText().toString(),R.drawable.uranus);
                 activity.onInsertPlanete(p);
+                FragmentPlanete.this.dismiss();
 
             }
         });
